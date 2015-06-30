@@ -1,0 +1,17 @@
+<div class="jumbotron" ng-init="mainCtrl.getDrinkIndex()">
+	<h1 class="text-center">Bartinder</h1>
+</div>
+
+<a href="#/new"><button class="btn btn-info">Add Drink</button></a>
+
+<section>
+	<ul>
+		<li ng-repeat="drink in mainCtrl.jsonDrinks">
+			{{drink.name}} - ${{drink.price}}
+			<div>
+				<button class="btn btn-info"><a href="#/drinks/{{drink.id}}">Show</a></button>
+				<button class="btn btn-warning"><a href="#/drinks/{{drink.id}}/edit">Edit</a></button>
+			</div>
+		</li>
+	</ul>
+</section>
